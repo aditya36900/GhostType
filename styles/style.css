@@ -1,0 +1,181 @@
+/* RESET & BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 350px;
+    height: 500px; /* Slightly taller for branding */
+    background-color: #0d1117; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c9d1d9;
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* HEADER & BRANDING */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 12px;
+}
+
+.brand-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.title-accent {
+    font-weight: 700;
+    font-size: 24px;
+    color: #58a6ff; /* Cyber Blue */
+    line-height: 1;
+}
+
+.org-badge {
+    font-size: 10px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.version {
+    font-size: 10px;
+    background: #21262d;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: #8b949e;
+    border: 1px solid #30363d;
+}
+
+/* TEXT AREA */
+#content {
+    flex-grow: 1;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #7ee787; 
+    padding: 12px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    resize: none;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#content:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+#content::-webkit-scrollbar { width: 8px; }
+#content::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+
+/* BUTTON */
+#run-script-btn {
+    margin-top: 15px;
+    background: linear-gradient(90deg, #1f6feb, #238636);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+#run-script-btn:hover { opacity: 0.9; }
+#run-script-btn:active { transform: scale(0.98); }
+.btn-success { background: #238636 !important; }
+
+/* INSTRUCTIONS */
+.instructions {
+    margin-top: 20px;
+    background: #161b22;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+}
+
+.step {
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background: #30363d;
+    border-radius: 50%;
+    font-size: 10px;
+    margin-right: 8px;
+    color: #fff;
+}
+
+kbd {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-bottom-color: #484f58;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #484f58;
+    color: #c9d1d9;
+    font-family: monospace;
+    font-size: 11px;
+    padding: 3px 6px;
+}
+
+/* FOOTER & DEVELOPER CREDIT */
+.footer {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #21262d;
+}
+
+.dev-credit {
+    font-size: 11px;
+    color: #8b949e;
+}
+
+.dev-name {
+    color: #58a6ff; /* Cyber Blue */
+    font-weight: 600;
+    text-decoration: none; /* Remove default underline */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.dev-name:hover {
+    color: #79c0ff; /* Brighter blue on hover */
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.6); /* Neon Glow effect */
+    text-decoration: underline;
+}
